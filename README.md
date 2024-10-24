@@ -152,7 +152,17 @@ http://localhost:3000/pois/nearby?cep=01001000&maxDistance=10
 ```
 </details>
 
+## 👤 Autor: [Igor Cavalcanti Moura](https://github.com/IgorCavalcantiMoura)
+
+
+Desenvolvedor Full Stack Jr. apaixonado por tecnologia, sempre buscando novos desafios e aprendizados. Sinta-se à vontade para me contatar e contribuir com o projeto!
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/igor-cavalcanti-moura/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/IgorCavalcantiMoura)
+
 ## 📝 Licença
 Este projeto está sob a licença MIT. Sinta-se à vontade para contribuir!
+
+
 
 
