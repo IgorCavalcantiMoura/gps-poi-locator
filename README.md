@@ -2,6 +2,7 @@
 
 # 📍Plataforma de Pontos de Interesse (POI) por CEP. 🛰️
 <p align="center">
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
   <img src="https://img.shields.io/github/repo-size/IgorCavalcantiMoura/gps-poi-locator?style=for-the-badge" alt="GitHub repo size"/>
   <img src="https://img.shields.io/github/languages/count/IgorCavalcantiMoura/gps-poi-locator?style=for-the-badge" alt="GitHub language count"/>
   <img src="https://img.shields.io/github/forks/IgorCavalcantiMoura/gps-poi-locator?style=for-the-badge" alt="GitHub forks"/>
@@ -33,14 +34,21 @@ Para rodar o projeto localmente, é necessário ter instalado:
 
 - Node.js
 - MySQL
-
+  
 ## 🚀 Rodando o Projeto
-#### 1 - Clonar o Repositório
+<details>
+<summary>1 - Clonar o Repositório</summary>
+  
+#### 
 ```
 git clone https://github.com/sua-conta/poi-cep-api.git
 cd poi-cep-api
 ```
-#### 2. Configurar o Banco de Dados
+</details>
+
+<details>
+  <summary>2. Configurar o Banco de Dados</summary>
+  
 Crie um banco de dados no MySQL e configure o arquivo ormconfig.json:
 
 ```
@@ -55,16 +63,21 @@ Crie um banco de dados no MySQL e configure o arquivo ormconfig.json:
   "synchronize": true
 }
 ```
-
-#### 3. Instalar Dependências
+</details>
+<details>
+  <summary>3. Instalar Dependências</summary>
 
 ```
 npm run start
 ```
 A API estará disponível em http://localhost:5000.
 
+</details>
+
 ## 🔍 Endpoints
-#### 1. Cadastrar POI
+<details>
+  <summary>1. Cadastrar Pontos de Interesse</summary>
+
 - URL: /pois
 - Método: POST
 - Corpo da Requisição:
@@ -84,7 +97,11 @@ A API estará disponível em http://localhost:5000.
   "cep": "01001000"
 }
 ```
-#### 2. Listar Todos os POIs
+</details>
+<details>
+  <summary>2. Listar Todos os Pontos de Interesse</summary>
+  
+#### 
 - URL: /pois
 - Método: GET
 - Resposta de Sucesso:
@@ -103,8 +120,10 @@ A API estará disponível em http://localhost:5000.
 ]
 
 ```
+</details>
+<details>
+  <summary>3. Listar POIs por Proximidade</summary>
 
-#### 3. Listar POIs por Proximidade
 - URL: /pois/nearby
 - Método: GET
 - Parâmetros de Query:
@@ -129,6 +148,8 @@ http://localhost:3000/pois/nearby?cep=01001000&maxDistance=10
   }
 ]
 ```
+</details>
+
 ## 📝 Licença
 Este projeto está sob a licença MIT. Sinta-se à vontade para contribuir!
 
