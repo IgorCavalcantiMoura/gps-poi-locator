@@ -1,85 +1,135 @@
+
+
+# 📍Plataforma de Pontos de Interesse (POI) por CEP. 🛰️
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+  <img src="https://img.shields.io/github/repo-size/IgorCavalcantiMoura/gps-poi-locator?style=for-the-badge" alt="GitHub repo size"/>
+  <img src="https://img.shields.io/github/languages/count/IgorCavalcantiMoura/gps-poi-locator?style=for-the-badge" alt="GitHub language count"/>
+  <img src="https://img.shields.io/github/forks/IgorCavalcantiMoura/gps-poi-locator?style=for-the-badge" alt="GitHub forks"/>
+  <img src="https://img.shields.io/bitbucket/issues/IgorCavalcantiMoura/gps-poi-locator?style=for-the-badge" alt="Bitbucket open issues"/>
+  <img src="https://img.shields.io/bitbucket/pr-raw/IgorCavalcantiMoura/gps-poi-locator?style=for-the-badge" alt="Bitbucket open pull requests"/>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+Este projeto é uma API RESTful desenvolvida para fornecer funcionalidades para cadastrar e localizar pontos de interesse (POIs) com base na proximidade de um CEP.
+
+<p align="center">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3JjOG1tMHFqMTdtaWg0MTJodnVydmh6NHNwdm8yNmZwOXpvaXpxbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HzMfJIkTZgx8s/giphy.webp"/>
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 📋 Requisitos do Projeto
+- Cadastrar Pontos de Interesse: Nome e CEP.
+- Listar Todos os POIs: Exibe todos os pontos cadastrados.
+- Listar POIs por Proximidade: Encontra POIs dentro de uma distância especificada a partir de um CEP de referência.
 
-## Project setup
+## 🛠️ Tecnologias Utilizadas
+- Nest.js: Framework para a criação de APIs com Node.js.
+- MySQL: Banco de dados relacional para armazenar os POIs.
+- TypeORM: ORM utilizado para a interação com o banco de dados.
+- Awesome API CEP: Serviço para obter coordenadas geográficas com base no CEP.
 
-```bash
-$ npm install
+## ⚙️ Pré-requisitos
+Para rodar o projeto localmente, é necessário ter instalado:
+
+- Node.js
+- MySQL
+
+## 🚀 Rodando o Projeto
+#### 1 - Clonar o Repositório
+```
+git clone https://github.com/sua-conta/poi-cep-api.git
+cd poi-cep-api
+```
+#### 2. Configurar o Banco de Dados
+Crie um banco de dados no MySQL e configure o arquivo ormconfig.json:
+
+```
+{
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "seu-usuario",
+  "password": "sua-senha",
+  "database": "nome_do_banco",
+  "entities": ["dist/**/*.entity{.ts,.js}"],
+  "synchronize": true
+}
 ```
 
-## Compile and run the project
+#### 3. Instalar Dependências
 
-```bash
-# development
-$ npm run start
+```
+npm run start
+```
+A API estará disponível em http://localhost:5000.
 
-# watch mode
-$ npm run start:dev
+## 🔍 Endpoints
+#### 1. Cadastrar POI
+- URL: /pois
+- Método: POST
+- Corpo da Requisição:
+```
+{
+  "nome": "Lanchonete",
+  "cep": "01001000"
+}
 
-# production mode
-$ npm run start:prod
+```
+- Resposta de sucesso:
+
+```
+{
+  "id": 1,
+  "nome": "Lanchonete",
+  "cep": "01001000"
+}
+```
+#### 2. Listar Todos os POIs
+- URL: /pois
+- Método: GET
+- Resposta de Sucesso:
+```
+[
+  {
+    "id": 1,
+    "nome": "Lanchonete",
+    "cep": "01001000"
+  },
+  {
+    "id": 2,
+    "nome": "Posto",
+    "cep": "02020020"
+  }
+]
+
 ```
 
-## Run tests
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+#### 3. Listar POIs por Proximidade
+- URL: /pois/nearby
+- Método: GET
+- Parâmetros de Query:
+  - cep: CEP de referência (ex: 01001000)
+  - maxDistance: Distância máxima em quilômetros (ex: 10)
+Exemplo de URL:
 ```
+http://localhost:3000/pois/nearby?cep=01001000&maxDistance=10
+```
+- Resposta de Sucesso:
+```
+[
+  {
+    "id": 1,
+    "nome": "Lanchonete",
+    "cep": "01001000"
+  },
+  {
+    "id": 3,
+    "nome": "Joalheria",
+    "cep": "01500010"
+  }
+]
+```
+## 📝 Licença
+Este projeto está sob a licença MIT. Sinta-se à vontade para contribuir!
 
-## Resources
 
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
