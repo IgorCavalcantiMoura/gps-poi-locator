@@ -3,10 +3,12 @@
 # 📍Plataforma de Pontos de Interesse (POI) por CEP. 🛰️
 <p align="center">
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
-  <img src="https://img.shields.io/github/repo-size/IgorCavalcantiMoura/gps-poi-locator?style=for-the-badge" alt="GitHub repo size"/>
-  <img src="https://img.shields.io/github/languages/count/IgorCavalcantiMoura/gps-poi-locator?style=for-the-badge" alt="GitHub language count"/>
-  <img src="https://img.shields.io/github/forks/IgorCavalcantiMoura/gps-poi-locator?style=for-the-badge" alt="GitHub forks"/>
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/maintenance-active-brightgreen?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/platform-NestJS-red?style=for-the-badge&logo=nestjs"/>
+  <img src="https://img.shields.io/badge/docs-available-brightgreen?style=for-the-badge"/>
+
+
 
 </p>
 
