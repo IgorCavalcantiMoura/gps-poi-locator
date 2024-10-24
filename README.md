@@ -6,8 +6,8 @@
   <img src="https://img.shields.io/github/repo-size/IgorCavalcantiMoura/gps-poi-locator?style=for-the-badge" alt="GitHub repo size"/>
   <img src="https://img.shields.io/github/languages/count/IgorCavalcantiMoura/gps-poi-locator?style=for-the-badge" alt="GitHub language count"/>
   <img src="https://img.shields.io/github/forks/IgorCavalcantiMoura/gps-poi-locator?style=for-the-badge" alt="GitHub forks"/>
-  <img src="https://img.shields.io/bitbucket/issues/IgorCavalcantiMoura/gps-poi-locator?style=for-the-badge" alt="Bitbucket open issues"/>
-  <img src="https://img.shields.io/bitbucket/pr-raw/IgorCavalcantiMoura/gps-poi-locator?style=for-the-badge" alt="Bitbucket open pull requests"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge"/>
+
 </p>
 
 
